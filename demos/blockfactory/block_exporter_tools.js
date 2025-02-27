@@ -9,8 +9,6 @@
  * block definitions and generator stubs for given block types.  Also generates
  * toolbox XML for the exporter's workspace.  Depends on the FactoryUtils for
  * its code generation functions.
- *
- * @author quachtina96 (Tina Quach)
  */
 'use strict';
 
@@ -90,7 +88,7 @@ BlockExporterTools.prototype.getBlockDefinitions =
   }
 
   // Surround json with [] and comma separate items.
-  if (definitionFormat == "JSON") {
+  if (definitionFormat === "JSON") {
     return "[" + blockCode.join(",\n") + "]";
   }
   return blockCode.join("\n\n");
@@ -170,7 +168,7 @@ BlockExporterTools.prototype.generateCategoryFromBlockLib =
 };
 
 /**
- * Generate selector dom from block library storage. For each block in the
+ * Generate selector DOM from block library storage. For each block in the
  * library, it has a block option, which consists of a checkbox, a label,
  * and a fixed size preview workspace.
  * @param {!BlockLibraryStorage} blockLibStorage Block Library Storage object.
